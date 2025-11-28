@@ -1,9 +1,12 @@
 package com.example.demo.model;
 
+import java.util.List;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 
 @Entity
@@ -18,6 +21,9 @@ public class Servicio {
 	private String descripcion;
 	private String duracion;
 	private Double precio;
+	
+	@OneToMany(mappedBy = "servicio")
+	private List<Cita> citas;
 	
 	public Servicio() {
 	}
@@ -69,6 +75,15 @@ public class Servicio {
 
 	public void setPrecio(Double precio) {
 		this.precio = precio;
+	}
+
+	
+	public List<Cita> getCitas() {
+		return citas;
+	}
+
+	public void setCitas(List<Cita> citas) {
+		this.citas = citas;
 	}
 
 	@Override

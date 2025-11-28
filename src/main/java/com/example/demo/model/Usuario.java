@@ -1,9 +1,12 @@
 package com.example.demo.model;
 
+import java.util.List;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 
 @Entity
@@ -18,6 +21,12 @@ public class Usuario {
 	private String email;
 	private String password;
 	private String telefono;
+	
+	@OneToMany(mappedBy = "usuario")
+	private List<Cita> citas;
+	
+	@OneToMany(mappedBy = "usuario")
+	private List<Profesional> profesionales;
 	
 	public Usuario() {
 	}
@@ -69,6 +78,24 @@ public class Usuario {
 
 	public void setTelefono(String telefono) {
 		this.telefono = telefono;
+	}
+
+	
+	public List<Cita> getCitas() {
+		return citas;
+	}
+
+	public void setCitas(List<Cita> citas) {
+		this.citas = citas;
+	}
+
+	
+	public List<Profesional> getProfesionales() {
+		return profesionales;
+	}
+
+	public void setProfesionales(List<Profesional> profesionales) {
+		this.profesionales = profesionales;
 	}
 
 	@Override
