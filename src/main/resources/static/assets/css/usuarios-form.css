@@ -1,0 +1,88 @@
+/* ====== CONTENEDOR GENERAL ====== */
+body {
+    font-family: Arial, sans-serif;
+    background: #f3f3f3;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 450px;
+    margin: 50px auto;
+    padding: 30px;
+    background: white;
+    border-radius: 12px;
+
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* ====== TITULO ====== */
+h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #333;
+}
+
+/* ====== GRUPOS ====== */
+.form-group {
+    margin-bottom: 18px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ====== LABELS ====== */
+label {
+    font-weight: bold;
+    color: #444;
+    margin-bottom: 6px;
+}
+
+/* ====== INPUTS ====== */
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    padding: 12px;
+    font-size: 16px;
+
+    border: 1px solid #cfcfcf;
+    border-radius: 6px;
+    background: #fafafa;
+
+    transition: 0.3s ease;
+}
+
+input:focus {
+    outline: none;
+    background: #fff;
+    border-color: #3f8cff;
+    box-shadow: 0 0 6px rgba(63, 140, 255, 0.4);
+}
+
+/* ====== BOTÓN GUARDAR ====== */
+.btn-guardar {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+
+    background: #3f8cff;
+    border: none;
+    border-radius: 6px;
+
+    color: white;
+    font-size: 17px;
+    cursor: pointer;
+
+    transition: 0.25s ease;
+}
+
+.btn-guardar:hover {
+    background: #1f6fde;
+}
+
+/* ====== RESPONSIVE ====== */
+@media (max-width: 500px) {
+    .container {
+        width: 90%;
+        padding: 20px;
+    }
+}

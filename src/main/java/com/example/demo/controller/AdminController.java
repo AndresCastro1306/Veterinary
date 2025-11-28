@@ -17,5 +17,10 @@ public class AdminController {
 		return "admin/home";
 	}
 	
+	@GetMapping("/formulario")
+	public String formulario() {
+		return "formulario";
+	}
+	
 	
 }
